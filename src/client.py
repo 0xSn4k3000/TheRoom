@@ -71,10 +71,12 @@ Usage:
         self.Mainwin.addstr(by , self.MainColor)
         self.Mainwin.addstr(HelpPage , self.MainColor)
         self.Refresh()
+        self.RefreshBot()
 
 
         while self.NotExit:
             self.Refresh()
+            self.RefreshBot()
             cmd = self.Botwin.getstr()
             self.HandleCommand(cmd.decode("ascii"))
 
@@ -162,6 +164,7 @@ Usage:
     def StartSend(self):
         self.Mainwin.addstr(">>> You JOINED!\n" , GREEN | A_BOLD)
         self.Refresh()
+        self.RefreshBot()
         while 1:
             msg = self.Botwin.getstr()
             if msg.decode()[:5] == "/exit":
@@ -172,19 +175,22 @@ Usage:
                 self.ChangeColor(msg)
                 self.RefreshTop()
                 self.Refresh()
+                self.RefreshBot()
             elif msg.decode()[:6] == "/clear":
                 self.ClearScreen()
             elif msg.decode()[:5] == "/help":
                 self.HelpPage()
             else:
-                if len(msg) <= 1:
+                if len(msg) < 1:
                     self.Refresh()
+                    self.RefreshBot()
                 else:
                     rmsg = self.UserName + ": " + msg.decode() + "\n"
                     mine = "You: " + msg.decode() + "\n"
                     self.Mainwin.addstr(mine ,self.MainColor)
                     self.Send(self.Encrypt(rmsg))
                     self.Refresh()
+                    self.RefreshBot()
 
     def HandleKeys(self):
         secret = self.GetEncKeys()
@@ -233,7 +239,6 @@ Usage:
             self.offset = position
 
         self.Mainwin.refresh(position , 0 , 2 , 0 , (Termh - 2), Termw)
-        self.RefreshBot()
 
 
     def Encrypt(self , msg):
