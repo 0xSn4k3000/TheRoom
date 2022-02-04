@@ -67,7 +67,7 @@ Usage:
         /exit       : Use /exit to quit the room correctly. 
         \n\r  
 """
-        self.Mainwin.addstr(Banner)
+        self.Mainwin.addstr(Banner , RED)
         self.Mainwin.addstr(by , self.MainColor)
         self.Mainwin.addstr(HelpPage , self.MainColor)
         self.Refresh()
