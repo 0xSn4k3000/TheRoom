@@ -11,5 +11,5 @@ use /name to change your name by default name is anonymous
 use /join to join the room
 inside the room ther is onther commands you can use. to know more about the command run the command without args
 
-# THX TO MR KAITO to work with the server side
+# Thanks MR KAITO for programming the server side
 # For any reports u can messages me here: sysndicate91957@protonmail.com
