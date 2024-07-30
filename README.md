@@ -4,3 +4,4 @@
 Featuring an intuitive layout crafted with terminal user interface (TUI) libraries, TheRoom enhances the user experience by providing a visually appealing and organized environment for group discussions. The application is perfect for those who prefer the simplicity of terminal interactions while needing robust security measures.
 
 # bug
+As I wrote this very long time ago while learning (even before the creation time as I moved my github repos from one account to another '-') I didn't used asymmetric encryption to share the keys between serv-cli  
