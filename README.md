@@ -1,15 +1,6 @@
 # TheRoom
-TheRoom is a python chat room using end-to-end Encryption to encrypt messages
+*TheRoom* is a terminal-based group chat application that utilizes *AES-256 encryption* to secure messages exchanged between users. Designed for privacy and security, this project ensures that all communications within the chat are encrypted, allowing users to share sensitive information with confidence.
 
-# Encryption Alg
-We are using AES encryption with keys of 256 bits length to encrypt all messages
+Featuring an intuitive layout crafted with terminal user interface (TUI) libraries, TheRoom enhances the user experience by providing a visually appealing and organized environment for group discussions. The application is perfect for those who prefer the simplicity of terminal interactions while needing robust security measures.
 
-# How to use
-After download and run the script (You should run it in a full screen terminal)
-use /connect to connect to your server for example /connect 192.168.1.1 1337
-use /name to change your name by default name is anonymous
-use /join to join the room
-inside the room ther is onther commands you can use. to know more about the command run the command without args
-
-# Thanks MR KAITO for programming the server side
-# For any reports u can messages me here: sysndicate91957@protonmail.com
+# bug
